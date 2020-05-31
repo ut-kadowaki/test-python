@@ -1,22 +1,22 @@
-import tkinter
+import tkinter as Tk
 
-root = tkinter.Tk()
-root.title("スカウト自動化")
-root.geometry("300x650")
-
-
-#ラベルフレームを配置
-url_frame = tkinter.LabelFrame(root,text="スプレットシート url",relief="ridge",bd=2)
-url_frame.pack(pady=10)
-
-url_box = tkinter.Entry(url_frame,width=30,bd=2)
+class Tktest(Tk.Frame):
+    
 
 
-#url_box = tkinter.Entry(width=30)
-#url_box.place(x=40, y=30)
-#url_label = tkinter.Label(text="スプレットシート url")
-#url_label.place(x=40, y=6)
-#read_button = tkinter.Button(text="読込")
-#read_button.place(x=220, y=27)
+    #ラベルフレームを配置
+    url_frame = Tk.LabelFrame(root, text='スプレットシート url')
+    url_frame.pack(anchor=Tk.W, fill=Tk.X)
+    root.url = Tk.Entry(url_frame)
+    root.url.pack(side=Tk.LEFT) 
+    root.url_butt = Tk.Button(url_frame,text="読込")
+    root.url_butt.pack(side=Tk.LEFT)
+    url_box = Tk.Entry(url_frame,width=30,bd=2)
+    url_frame.pack(pady=10)
 
-root.mainloop()
+    
+    root = Tk.Tk()
+    root.title("スカウト自動化")
+    root.geometry("300x650")
+
+    root.mainloop()

@@ -61,9 +61,10 @@ class Application(tk.Frame):
         search = tk.LabelFrame(self,text="検索条件")
         search.pack(fill=tk.X)
 
+        searchlist=["条件１","条件2","条件3"]
         self.searchCondition = tk.StringVar(self)
         self.searchConditionText = tk.Entry(search, textvariable=self.searchCondition).pack(fill=tk.X)
-        self.searchConditionOption = tk.OptionMenu(search,self.searchCondition, "")
+        self.searchConditionOption = tk.OptionMenu(search,self.searchCondition, *searchlist)
         self.searchConditionOption.pack(fill=tk.X)
 
         #年齢下限

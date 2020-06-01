@@ -9,7 +9,7 @@ class Application(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        #URL
+        #URL_sheet
         url = tk.LabelFrame(self,text="スプレットシートURL")
         self.ad_url=tk.Entry(url,width=20)
         self.ad_url.pack(side=tk.LEFT)
